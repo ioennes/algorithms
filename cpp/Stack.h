@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Node.h"
 
-template<typename T> class Stack {
+template<typename T>
+class Stack {
 private:
   Node<T>* top;
 
@@ -12,7 +13,7 @@ public:
     Node<T>* temp = top;
     while(temp != nullptr) {
       Node<T>* next = temp->getNext();
-      temp = nullptr;
+      delete temp;
       temp = next;
     }
   }
@@ -26,13 +27,14 @@ public:
   T pop() {
     if(empty()) throw std::out_of_range("Stack is empty");
     Node<T>* temp = top;
-    top = top->getInfo();
-    T info = temp->getNext();
+    T info = temp->getInfo();
+    top = top->getNext();
     delete temp;
     return info;
   }
 
   T peek() {
+    if(empty()) throw std::out_of_range("Stack is empty");
     return top->getInfo();
   }
 
@@ -40,3 +42,4 @@ public:
     return top == nullptr;
   }
 };
+

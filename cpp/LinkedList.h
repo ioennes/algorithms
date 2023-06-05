@@ -12,25 +12,18 @@ public:
     Node<T>* temp = head;
     while(temp != nullptr) {
       Node<T>* next = temp->getNext();
-      temp = nullptr;
+      delete temp;
       temp = next;
     }
   }
   
-  void add(int info) {
+  void add(T info) {
     Node<T>* next = new Node<T>(info);
-    if(head == nullptr) {
-      head = next;
-      return;
-    }
-    Node<T>* temp = head;
-    while(temp->getNext() != nullptr) {
-      temp = temp->getNext();
-    }
-    temp->setNext(next);
+    next->setNext(head);
+    head = next;
   }
   
-  bool remove(int info) {
+  bool remove(T info) {
     if(head == nullptr) return false;
     if(head->getInfo() == info) {
       Node<T>* temp = head;

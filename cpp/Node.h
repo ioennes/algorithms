@@ -3,20 +3,23 @@
 template<typename T> class Node {
 private:
   T info;
-  Node* next;
+  Node<T>* next;
 
 public:
   Node(T info): info(info), next(nullptr) {};
 
-  Node* getNext() {
+  Node<T>* getNext() const {
     return next;
   }
-  T getInfo() {
+  T getInfo() const {
     return info;
   }
 
-  void setNext(Node* next_node) {
+  void setNext(Node<T>* next_node) {
     next = next_node;
+  }
+  void setInfo(T i) {
+    info = i;
   }
 };
 
