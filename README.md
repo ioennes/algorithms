@@ -18,4 +18,4 @@
 | Towers of Hanoi            | ✓    | ✘   |
 | Insertion Sort             | ✓    | ✘   |
 | Selection Sort             | ✓    | ✘   |
-| Merge Sort                 | ✘    | ✓   |
+| Merge Sort                 | ✓    | ✓   |
