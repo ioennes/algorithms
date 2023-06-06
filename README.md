@@ -5,7 +5,7 @@
 | Data Structure / Algorithm | Java | C++ |
 |----------------------------|------|-----|
 | Node                       | ✓    | ✓   |
-| Doubly Linked List         | ✓    | ✘   |
+| Doubly Linked List         | ✓    | ✓   |
 | Linked List                | ✓    | ✓   |
 | Stack                      | ✓    | ✓   |
 | Queue                      | ✓    | ✓   |
@@ -14,4 +14,8 @@
 | Adjacency Matrix (Graph)   | ✓    | ✘   |
 | Depth First Search         | ✓    | ✘   |
 | Breadth First Search       | ✓    | ✘   |
-| Heap                       | ✘    | ✘   |
+| Peak Finding               | ✘    | ✓   |
+| Towers of Hanoi            | ✓    | ✘   |
+| Insertion Sort             | ✓    | ✘   |
+| Selection Sort             | ✓    | ✘   |
+| Merge Sort                 | ✘    | ✓   |
