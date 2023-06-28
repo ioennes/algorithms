@@ -33,19 +33,19 @@ public class MatrixDigraph {
 
   public void addEdge(int u, int v) {
     if(u >= matrix.length || v >= matrix.length || u < 0 || v < 0)
-      return;
+    return;
     matrix[u][v] = 1;
   }
 
   public void removeEdge(int u, int v) {
     if(u >= matrix.length || v >= matrix.length || u < 0 || v < 0)
-      return;
+    return;
     matrix[u][v] = 0;
   }
 
   public boolean edge(int u, int v) {
     if(u >= matrix.length || v >= matrix.length || u < 0 || v < 0)
-      return false;
+    return false;
     return matrix[u][v] == 1;
   }
 
@@ -55,7 +55,7 @@ public class MatrixDigraph {
 
     for(int i = 0; i < matrix.length; i++) {
       if(!visited[i] && matrix[u][i] == 1)
-        rdfs(i, visited);
+      rdfs(i, visited);
     }
   }
 
@@ -72,13 +72,13 @@ public class MatrixDigraph {
 
       for(int i = 0; i < matrix.length; i++) {
         if(!visited[i] && matrix[v][i] == 1)
-          stack.push(i);
+        stack.push(i);
       }
     }
   }
 
   public void bfs(int u) {
-    
+
     Queue<Integer> queue = new LinkedList<Integer>();
     boolean[] visited = new boolean[matrix.length];
 
@@ -91,7 +91,7 @@ public class MatrixDigraph {
 
       for(int i = 0; i < matrix.length; i++) {
         if(!visited[i] && matrix[v][i] == 1) 
-          queue.add(i);
+        queue.add(i);
       }
     }
   }
@@ -106,7 +106,7 @@ public class MatrixDigraph {
 
     while(!stack.empty()) {
       int v = stack.pop();
-      
+
       visited[v] = true;
 
       if(flag == 0) {
@@ -118,12 +118,12 @@ public class MatrixDigraph {
 
       for(int i = 0; i < matrix.length; i++) {
         if(!visited[i] && matrix[v][i] == 1)
-          stack.push(i);
+        stack.push(i);
       }
     }
     return false;
   }
-  
+
   public static void main(String[] argx) {
     MatrixDigraph d = new MatrixDigraph(5);
     d.addEdge(0, 1);
