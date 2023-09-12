@@ -57,3 +57,8 @@ replay_pid*
 *.app
 
 .gitignore
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
